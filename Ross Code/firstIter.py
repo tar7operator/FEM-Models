@@ -187,10 +187,8 @@ for i in range(number_of_modes):
 # SAVE RESULTS
 with open(OUTPUT_FILE, "w", encoding="utf-8") as file:
 
-    file.write("JET ENGINE ROTORDYNAMICS - ROSS\n")
-    file.write("=" * 65 + "\n\n")
-
-    file.write("UNDAMPED MODAL ANALYSIS\n")
+    file.write("ROTORDYNAMICS - ROSS\n")
+    file.write("=" * 65 + "\n")
     file.write(f"Material        : Steel\n")
     file.write(f"Density         : {MATERIAL.rho} kg/m3\n")
     file.write(f"Young's Modulus : {MATERIAL.E:.3e} Pa\n")
@@ -198,7 +196,6 @@ with open(OUTPUT_FILE, "w", encoding="utf-8") as file:
     file.write(f"Beam Theory     : {BEAM_THEORY}\n")
     file.write(f"Rotor Speed     : {ROTOR_SPEED} rad/s\n")
     file.write(f"Total Length    : {positions[-1]*1000:.2f} mm\n")
-
     file.write("\nBEARING LOCATIONS\n")
     file.write("-" * 65 + "\n")
 

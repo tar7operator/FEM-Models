@@ -1,7 +1,5 @@
-JET ENGINE ROTORDYNAMICS - ROSS
+ROTORDYNAMICS - ROSS
 =================================================================
-
-UNDAMPED MODAL ANALYSIS
 Material        : Steel
 Density         : 7850.0 kg/m3
 Young's Modulus : 2.000e+11 Pa

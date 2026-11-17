@@ -1,4 +1,4 @@
-ROTOR - MODAL ANALYSIS
+ROTOR - TIMOSHENKO MODAL ANALYSIS
 ======================
 
 Nodes: 113

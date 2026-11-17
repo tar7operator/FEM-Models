@@ -103,7 +103,7 @@ frequencies = np.sqrt(np.maximum(values, 0))/(2*np.pi)
 
 # Save results
 with open("output.txt", "w") as f:
-    f.write("ROTOR - MODAL ANALYSIS\n")
+    f.write("ROTOR - TIMOSHENKO MODAL ANALYSIS\n")
     f.write("======================\n\n")
     f.write(f"Nodes: {len(nodes)}\n")
     f.write(f"Elements: {len(elements)}\n")
