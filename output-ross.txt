@@ -1,0 +1,30 @@
+JET ENGINE ROTORDYNAMICS - ROSS
+=================================================================
+
+UNDAMPED MODAL ANALYSIS
+Material        : Steel
+Density         : 7850.0 kg/m3
+Young's Modulus : 2.000e+11 Pa
+Shear Modulus   : 8.120e+10 Pa
+Beam Theory     : Timoshenko
+Rotor Speed     : 0.0 rad/s
+Total Length    : 164.20 mm
+
+BEARING LOCATIONS
+-----------------------------------------------------------------
+Front Bearing: Node 24, 34.00 mm
+Turbine: Node 72, 135.20 mm
+
+UNDAMPED NATURAL FREQUENCIES
+-----------------------------------------------------------------
+Mode      Frequency (Hz)      Mode Type
+1         2172.5746           Lateral
+2         2172.5746           Lateral
+3         3470.1520           Lateral
+4         3470.1520           Lateral
+5         7613.2357           Lateral
+6         7613.2360           Lateral
+7         9437.8773           Lateral
+8         9437.8778           Lateral
+9         18107.1415          Lateral
+10        18107.1459          Lateral

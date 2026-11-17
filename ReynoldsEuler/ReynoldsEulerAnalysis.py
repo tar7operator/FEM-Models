@@ -10,12 +10,12 @@ MODEL = {
     "name": "JET ENGINE ROTOR",
     "material": "Structural Steel",
     "density": 7850,
-    "youngs_modulus": 210e9,
+    "youngs_modulus": 200e9,
     "poisson_ratio": 0.30
 }
 
 # Geometry
-GEOMETRY = pd.read_csv("./geometry.csv").to_dict("records")
+GEOMETRY = pd.read_csv("geometry.csv").to_dict("records")
 show_geometry(GEOMETRY)
 
 E, RHO = MODEL["youngs_modulus"], MODEL["density"]
@@ -32,7 +32,7 @@ TOTAL_LENGTH = x_s
 
 # FEM nodes
 BEARING_POSITIONS = [(p["start"] + p["end"]) / 2 for p in PARTS if p["type"] == "bearing"]
-x_nodes = np.array(sorted(set([p["start"] for p in PARTS] + [PARTS[-1]["end"]] + BEARING_POSITIONS)))
+x_nodes = np.array(sorted(set([p["start"] for p in PARTS] + [PARTS[-1]["end"]] + BEARING_POSITIONS))) #getting all section ends and also the bearing
 n_nodes, n_dof = len(x_nodes), 2 * len(x_nodes)
 
 K, M = np.zeros((n_dof, n_dof)), np.zeros((n_dof, n_dof))
@@ -56,6 +56,7 @@ for i, (x1, x2) in enumerate(zip(x_nodes[:-1], x_nodes[1:])):
     dofs = [2*i, 2*i+1, 2*i+2, 2*i+3]
     K[np.ix_(dofs, dofs)] += k
     M[np.ix_(dofs, dofs)] += m
+
 
 # Bearing constraints
 fixed = [2 * np.argmin(abs(x_nodes - xb)) for xb in BEARING_POSITIONS]
